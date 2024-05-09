@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приховати/Показати елементи</title>
+    <style>
+        .element {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Приховати/Показати елементи</h1>
+    <div class="element" id="element1">Елемент 1</div>
+    <div class="element" id="element2">Елемент 2</div>
+    <div class="element" id="element3">Елемент 3</div>
+    <button id="toggleButton">Приховати/Показати</button>
+
+    <script>
+        document.getElementById("toggleButton").addEventListener("click", function() {
+            document.querySelectorAll(".element").forEach(function(element) {
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
